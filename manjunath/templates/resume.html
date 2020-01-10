@@ -6,15 +6,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
+  <style>
+  .button-modal{
+    margin : 100px;
+  }
+  </style>
+
+
 </head>
 <body>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Create Resume
-</button>
-
+<br>
+<div class='button-modal'>
+    <p>Create resume and save data into database.</p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Create Resume
+    </button>
+</div>
+<br>
+<div>
+    <p>Fetch data from database and Convert data into PDF file.</p>
+    <button><a href='{% url "view" %}' >CreatePDF</a></button>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
