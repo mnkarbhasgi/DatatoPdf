@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .models import createresume
-from django.contrib.auth.models import User  # , Group
 
 from reportlab.pdfgen import canvas
 from django.http import HttpResponse
