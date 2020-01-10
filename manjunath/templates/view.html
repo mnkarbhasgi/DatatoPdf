@@ -1,0 +1,16 @@
+
+<form method='GET' action='someview' >
+{% for data in user %}
+<input type='text' name='first_name' value='{{data.first_name}}' readonly><br><br>
+<input type='text' name='last_name' value='{{data.last_name}}' readonly><br><br>
+<input type='text' name='email' value='{{data.email}}' readonly><br><br>
+<input type='text' name='phone' value='{{data.phone}}' readonly><br><br>
+<input type='text' name='address' value='{{data.address}}' readonly><br><br>
+<input type='text' name='objective' value='{{data.objective}}' readonly><br><br>
+<input type='text' name='experiance' value='{{data.experiance}}' readonly><br><br>
+<input type='text' name='organization' value='{{data.organization}}' readonly><br><br>
+<input type='text' name='skills' value='{{data.skills}}' readonly><br><br>
+{% endfor %}
+<input type='submit' value='savetoPDF'>
+</form>
+    

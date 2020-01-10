@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Create Resume
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Resume</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+             <form role="form" method="POST" action="">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label class="control-label">First Name <span class="required">*</span></label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="first_name" id="first_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Last Name <span class="required">*</span></label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="last_name" id="last_name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Email <span class="required">*</span></label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="email" id="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Mobile <span class="required">*</span></label>
+                        <div>
+                            <input type="number" class="form-control input-lg" name="phone" id="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Address <span class="required">*</span></label>
+                        <div>
+                            <textarea class="form-control input-lg" name="address" id="address"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Objective <span class="required">*</span></label>
+                        <div>
+                            <textarea class="form-control input-lg" name="objective" id="objective"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Experiance </label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="experiance" id="exeriance">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Organization </label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="organization" id="organization">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="control-label">Technical Skills <span class="required">*</span></label>
+                        <div>
+                            <textarea class="form-control input-lg" name="skills" id="skills"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <input type="submit" id="btn_contact" class="btn btn-info btn-block" value="Submit">
+                        </div>
+                    </div>
+
+                </form>
+            
+            </div>
+     
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
